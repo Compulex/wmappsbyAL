@@ -36,3 +36,19 @@ ul{
 .desc{
     margin: 15px;
 }
+@media only screen and (max-width: 800px){
+    #info{
+        width: 85%;
+    }
+    #web{
+        width: 90%;
+    }
+    #mobile{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 435px){
+    .icons{
+        float: none;
+    }
+}
