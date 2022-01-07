@@ -28,8 +28,27 @@
 						<li><a href="https://compulex.github.io/TableGenerator/">Table Generator</a></li>
 					</ul>
 				</div>
+				<script>
+					function getPlatform(){
+						var platform = [];
+						if(navigator.platform.indexOf("Android") > -1){
+							console.log("Here!!!");
+							//show apk files
+							document.getElementById("android").style.visibility = "hidden";
+						}
+						else{
+							//hide links then replace with 
+							var apks = document.getElementsByClassName("mapps");
+							for(var i = 0; i < apks.length; i++){
+								apks[i].style.visibility = "hidden"
+							}
+						}
+					}
+					getPlatform();
+				</script>
 				<div id="mobile" class="box">
 					<h2>Android Mobile Apps</h2>
+					<p id="android"><strong>Use an android mobile device to download the following apps</strong></p>
 					<div class="apps">
 						<figure class="icons">
 							<img src="images/remindme_icon.png" width="150" height="150">
@@ -38,7 +57,7 @@
 						<p class="desc">Need a quick reminder to do something in the next hour or so? 
 							This may be the app for you. With this app, you can either record yourself 
 							or type in a brief reminder and set a timer.</p>
-						<a href="remindme_AL.apk">Download Here</a>
+						<a class= "mapps" href="remindme_AL.apk">Download Here</a>
 					</div>
 					<div class="apps">
 						<figure class="icons">
@@ -48,11 +67,11 @@
 						<p class="desc">An ongoing positive version of hangman, but as you finish a word 
 							or sentence you are forming an angel. Consists of a mixture of bible verses, 
 							inspirational, and uplifting quotes.</p>
-						<a href="gfaa_AL.apk">Download Here</a>
+						<a class= "mapps" href="gfaa_AL.apk">Download Here</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<footer>Stay blessed, never stressed &#x1f64f;</footer>
+		<footer><em>Stay blessed, never stressed</em> &#x1f64f;</footer>
 	</body>
 </html>
