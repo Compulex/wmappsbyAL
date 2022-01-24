@@ -39,7 +39,7 @@
 						<p class="desc">An ongoing positive version of hangman, but as you finish a word 
 							or sentence you are forming an angel. Consists of a mixture of bible verses, 
 							inspirational, and uplifting quotes.</p>
-						<a class= "mapps" href="gfaa_AL.apk">Download Here</a>
+						<a class= "mapps" href="androidapps/gfaa_AL.apk">Download Here</a>
 					</div>
 					<div class="apps">
 						<figure class="icons">
@@ -49,7 +49,7 @@
 						<p class="desc">Need a quick reminder to do something in the next hour or so? 
 							This may be the app for you. With this app, you can either record yourself 
 							or type in a brief reminder and set a timer.</p>
-						<a class= "mapps" href="remindme_AL.apk">Download Here</a>
+						<a class= "mapps" href="androidapps/remindme_AL.apk">Download Here</a>
 					</div>
 					<div class="apps">
 						<figure class="icons">
@@ -59,22 +59,21 @@
 						<p class="desc">This handy tool does a calculation of evenly distributing the bill 
 							between multiple people, whether its the restaurant check or any other service 
 							bill.</p>
-						<a class= "mapps" href="splitbill_AL.apk">Download Here</a>
+						<a class= "mapps" href="androidapps/splitbill_AL.apk">Download Here</a>
 					</div>
 				</div>
 			</div>
 			<script language="javascript" type="text/javascript">
 				var platform = [];
 				if(navigator.platform.indexOf("Android") > -1){
-					console.log("Here!!!");
 					//show apk files
 					document.getElementById("android").style.visibility = "hidden";
 				}
 				else{
-					//hide links then replace with 
+					//hide links
 					var apks = document.getElementsByClassName("mapps");
 					for(var i = 0; i < apks.length; i++){
-						apks[i].style.visibility = "hidden"
+						apks[i].style.visibility = "hidden";
 					}
 				}
 			</script>
