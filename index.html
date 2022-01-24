@@ -28,30 +28,22 @@
 						<li><a href="https://compulex.github.io/TableGenerator/">Table Generator</a></li>
 					</ul>
 				</div>
-				<script>
-					function getPlatform(){
-						var platform = [];
-						if(navigator.platform.indexOf("Android") > -1){
-							console.log("Here!!!");
-							//show apk files
-							document.getElementById("android").style.visibility = "hidden";
-						}
-						else{
-							//hide links then replace with 
-							var apks = document.getElementsByClassName("mapps");
-							for(var i = 0; i < apks.length; i++){
-								apks[i].style.visibility = "hidden"
-							}
-						}
-					}
-					getPlatform();
-				</script>
 				<div id="mobile" class="box">
 					<h2>Android Mobile Apps</h2>
 					<p id="android"><strong>Use an android mobile device to download the following apps</strong></p>
 					<div class="apps">
 						<figure class="icons">
-							<img src="images/remindme_icon.png" width="150" height="150">
+							<img src="images/gfaa_icon.png" alt="Guess For An Angel Icon" width="150" height="150">
+							<figcaption>Guess For An Angel</figcaption>
+						</figure>
+						<p class="desc">An ongoing positive version of hangman, but as you finish a word 
+							or sentence you are forming an angel. Consists of a mixture of bible verses, 
+							inspirational, and uplifting quotes.</p>
+						<a class= "mapps" href="gfaa_AL.apk">Download Here</a>
+					</div>
+					<div class="apps">
+						<figure class="icons">
+							<img src="images/remindme_icon.png" alt="Remind Me Icon" width="150" height="150">
 							<figcaption>Remind Me</figcaption>
 						</figure>
 						<p class="desc">Need a quick reminder to do something in the next hour or so? 
@@ -61,16 +53,31 @@
 					</div>
 					<div class="apps">
 						<figure class="icons">
-							<img src="images/gfaa_icon.png" width="150" height="150">
-							<figcaption>Guess For An Angel</figcaption>
+							<img src="images/splitbill_icon.PNG" alt="Split Bill Icon" width="150" height="150">
+							<figcaption>Split Bill</figcaption>
 						</figure>
-						<p class="desc">An ongoing positive version of hangman, but as you finish a word 
-							or sentence you are forming an angel. Consists of a mixture of bible verses, 
-							inspirational, and uplifting quotes.</p>
-						<a class= "mapps" href="gfaa_AL.apk">Download Here</a>
+						<p class="desc">This handy tool does a calculation of evenly distributing the bill 
+							between multiple people, whether its the restaurant check or any other service 
+							bill.</p>
+						<a class= "mapps" href="splitbill_AL.apk">Download Here</a>
 					</div>
 				</div>
 			</div>
+			<script language="javascript" type="text/javascript">
+				var platform = [];
+				if(navigator.platform.indexOf("Android") > -1){
+					console.log("Here!!!");
+					//show apk files
+					document.getElementById("android").style.visibility = "hidden";
+				}
+				else{
+					//hide links then replace with 
+					var apks = document.getElementsByClassName("mapps");
+					for(var i = 0; i < apks.length; i++){
+						apks[i].style.visibility = "hidden"
+					}
+				}
+			</script>
 		</div>
 		<footer><em>Stay blessed, never stressed</em> &#x1f64f;</footer>
 	</body>
