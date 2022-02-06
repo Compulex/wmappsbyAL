@@ -1,2 +1,2 @@
 # My Custom Portfolio Site
-Contains all web and mobile applications that can be helpful and fun
+Contains all the web and mobile (android for now) applications that I created with different programming languages. Enjoy. 
