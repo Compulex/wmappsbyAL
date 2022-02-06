@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Priorities For The Day</title>
+    </head>
+    <body>
+        <h1>Priorities For The Day</h1>
+
+        <label>Enter a task: </label>
+		<input id="task_input" type="text" placeholder="Appointment, Study, etc.">
+		<br>
+		
+		<label for="time_input">Time it takes: </label>
+		<input id="time_input" name="time_input" type="number" min="1" max="59" value="1">
+		
+		<select id="time_sel">
+			<option value="seconds">seconds</option>
+			<option value="minutes">minutes</option>
+			<option value="hours">hours</option>
+		</select>
+		<br>
+		
+		<label for="urge_level">Urgency: </label>
+		<input id="urge_level" name="urge_level" type="range" min="1" max="5">
+		<br>
+		
+		<label for="importance_level">Importance: </label>
+		<input id="importance_level" name="importance_level" type="range" min="1" max="5">
+		<br>
+		
+		<button id="add_btn">ADD</button>
+		
+		<div id="task_container">
+			<ul id="list_tasks"></ul>
+		</div>
+		
+		<button id="load_btn">Prioritize</button>
+		
+		<div id="load_div"> <h3>Try In This Order</h3> </div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
