@@ -15,7 +15,7 @@ body {
     text-transform: uppercase;
     width: auto;
     text-align: center;
-    background-image: url("../img/chalkboard_bkg.png");
+    background-image: url("../img/chalkboard.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -61,7 +61,7 @@ span{
 }
 table{
     width: 75%;
-    height: auto;
+    height: 75%;
 }
 caption, table{
     background-color: #cecbc5;
