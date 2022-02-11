@@ -154,6 +154,7 @@ function validateQuiz(qs){
     for(let q = 0; q < qs.length; q++){
         let prompt = qs[q].firstChild;
         let mc = qs[q].lastChild;
+        
         if(prompt.value == ""){
             prompt.style.border = "2px solid #d0342c";
             prompt.style.boxShadow = "5px 5px 5px #d0342c";
@@ -180,6 +181,29 @@ function validateQuiz(qs){
                 }
             }
         }
+
+        let qcb = qs[q].children;
+        //console.log(qcb);
+        //check if question is checkbox
+        if(qcb.length > 2){
+            if(qcb[2].tagName == "BR"){
+                if(qcb[3].tagName == "INPUT" && qcb[3].type == "checkbox"){
+                    for(let ci = 4; ci < qcb.length; ci+=3){
+                        let cinput = qcb[ci];
+                        if(cinput.value == ""){
+                            cinput.style.border = "2px solid #d0342c";
+                            cinput.style.boxShadow = "5px 5px 5px #d0342c";
+                            filledIn = false;
+                        }
+                        else{
+                            cinput.style.border = "1px solid black";
+                            cinput.style.boxShadow = "none";
+                        }
+                    }
+                }
+            }
+        }
+        
     }
     return filledIn;
 }//validateQuiz
@@ -187,12 +211,13 @@ function validateQuiz(qs){
 function takeInData(quest, n){
     var cloneNode = quest.cloneNode(true);
     var q = cloneNode.childNodes[0];
-    //replace input with paragraph
+    //replace input with paragraph for question
     replaceIP(cloneNode, q);
     
     //remove x span
     cloneNode.children[1].remove();
 
+    //change inputs for mc to just text
     if(cloneNode.children[1] != undefined){
         if(cloneNode.children[1].tagName == "OL"){
             var ol = cloneNode.children[1];
@@ -202,22 +227,27 @@ function takeInData(quest, n){
                 replaceIP(parent, choice);
             }
         }
+
         else if(cloneNode.children[1].tagName == "BR"){
-            if(cloneNode.children[2].tagName == "INPUT"){
-                cloneNode.children[2].style.border = "none";
-                cloneNode.children[2].style.borderBottom = "1px solid black";
+            cloneNode.children[1].remove(); //remove break tag
+            
+            let input = cloneNode.children[1];
+            //for short answer open-ended
+            if(input.tagName == "INPUT" && input.type == "text"){
+                input.style.border = "none";
+                input.style.borderBottom = "1px solid black";
             }
+            //for checkbox question
             else{
-                cloneNode.children[1].remove(); //remove br tag
-                for(let c = 1; c < cloneNode.children.length; c++){
+                for(let c = 0; c < cloneNode.children.length; c++){
                     var element = cloneNode.childNodes[c];
                     if(element.tagName == "INPUT"){
                         if(element.type == "text"){
+                            //replace input for check box with label
                             var cinput = cloneNode.childNodes[c];
                             var label = document.createElement("label");
                             label.innerHTML = cinput.value;
                             cloneNode.replaceChild(label, cinput);
-                            //replaceIP(cloneNode, cinput);
                         }
                         
                     }
