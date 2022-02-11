@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" type="text/css" href="print.css">-->
+        <title>Simple Quiz</title>
+        <style>h1{ text-align: center; }</style>
+    </head>
+    <body>
+        <h1 id="title"></h1>
+        <ol id="questions"></ol>
+        <script type="text/javascript">
+            var qtitle = document.getElementById("title");
+            var ol = document.getElementById("questions");
+
+            if(typeof(Storage) !== "undefined"){
+                var title = sessionStorage.getItem("qTitle");
+                qtitle.innerHTML = title;
+                
+                var quests = sessionStorage.getItem("qNum");
+                for(let q = 0; q < quests; q++){
+                    console.log(sessionStorage.getItem("quest" + q));
+                    var li = document.createElement("li");
+                    li.innerHTML = sessionStorage.getItem("quest" + q);
+                    ol.appendChild(li);
+                }
+            }
+        </script>
+    </body>
+</html>

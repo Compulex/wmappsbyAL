@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta charset="utf-8"/>
+		<title>Create Simple Quiz</title>
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+        <h1>Create Simple Quiz</h1>
+        <input type="text" id="quiz_title" placeholder="Name of Quiz" oninput="nameQuiz();">
+        
+        <div id="types_div">
+            <h2>Question Types: </h2>
+            <!--Multiple choice-->
+            <div id="mc" class="qTypes" onclick="makeMC();">
+                <p>Multiple Choice</p>
+                <ol id="mcq">
+                    <li>Choice A</li>
+                    <li>Choice B</li>
+                    <li>Choice C</li>
+                    <li>Choice D</li>
+                </ol>
+            </div>
+
+            <!--True/False-->
+            <div id="tf" class="qTypes" onclick="makeTF();">
+                <p>True/False</p>
+            </div>
+
+            <!--Fill in Blank-->
+            <div id="fib" class="qTypes" onclick="makeFIB();">
+                <p>Fill In _____</p>
+            </div>
+
+            <!--Short open-ended-->
+            <div id="soe" class="qTypes" onclick="makeShortOE();">
+                <input type="text" placeholder="Short Open Ended" disabled>
+            </div>
+
+            <!--Long open-ended-->
+            <div id="loe" class="qTypes" onclick="makeLongOE();">
+                <textarea disabled>Long Open Ended</textarea>
+            </div>
+
+            <!--Check All That Apply-->
+            <div id="cata" class="qTypes" onclick="makeCheckboxes();">
+                <p>Check All That Apply</p>
+                <input type="checkbox" disabled>
+                <label>Check 1</label><br>
+                <input type="checkbox" disabled>
+                <label>Check 2</label><br>
+                <input type="checkbox" disabled>
+                <label>Check 3</label><br>
+                <input type="checkbox" disabled>
+                <label>Check 4</label><br>
+
+            </div>
+        </div>
+
+        <div id="quiz">
+            <h3 id="qTitle"></h3>
+            <ol id="questions"></ol>
+        </div>
+
+        <button id="printBtn" onclick="print();">Print Quiz</button>
+
+        <script src="simple_quiz.js"></script>
+	</body>
+</html>

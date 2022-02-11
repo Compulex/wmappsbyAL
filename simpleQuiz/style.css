@@ -1,0 +1,58 @@
+body{
+    text-align: center;
+    background-color: #e0e094;
+}
+
+#types_div{
+    width: auto;
+    height: auto;
+    margin: 10px 0px 10px 0px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    padding: 5px;
+}
+.qTypes{
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 15%;
+    height: auto;
+    margin: auto;
+    cursor: pointer;
+}
+#cata{
+    padding-bottom: 10px; 
+}
+#soe, #loe{
+    padding: 10px;
+}
+#mcq{
+    list-style-type: lower-alpha;
+}
+#questions, #mcq{
+    text-align: left;
+}
+li, input[type=checkbox]{
+    margin: 5px;
+}
+#quiz{
+    overflow-y: auto;
+}
+.delete{
+    cursor: pointer;
+    padding: 5px;
+}
+.delete:hover{ background-color: red; }
+
+@media screen and (max-width: 1130px){
+    #types_div{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        overflow-y: auto;
+    }
+    .qTypes{
+        width: 50%;
+    }
+}
