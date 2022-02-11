@@ -33,6 +33,7 @@ body {
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
     text-transform:uppercase;
     width:100%;
+    color: black;
 }
 h1{ text-align: center; }
 #main{
@@ -50,5 +51,10 @@ h1{ text-align: center; }
 @media screen and (max-width: 425px){
     #main{
         font-size: 15px;
+    }
+}
+@media (prefers-color-scheme: dark){
+    body{
+        color: #91ffc8;
     }
 }
