@@ -24,7 +24,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#f5fffa;
+    background-color:#91ffc8;
     font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
     height: auto;
     margin: auto;
@@ -51,10 +51,5 @@ h1{ text-align: center; }
 @media screen and (max-width: 425px){
     #main{
         font-size: 15px;
-    }
-}
-@media (prefers-color-scheme: dark){
-    body{
-        color: #91ffc8;
     }
 }
