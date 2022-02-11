@@ -59,7 +59,9 @@ em{
 @media only screen and (max-width: 435px){
     .icons{
         float: none;
-        
         display: inline-block;
+    }
+    .mapps{
+	margin-bottom: 2px;
     }
 }
