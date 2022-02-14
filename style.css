@@ -12,7 +12,7 @@ body{
     height: 200px;
 }
 #mobile{
-    height: 325px;
+    height: 300px;
 }
 #web, #mobile{
     width: 50%;
@@ -62,6 +62,6 @@ em{
         display: inline-block;
     }
     .mapps{
-	margin-bottom: 2px;
+	margin-bottom: 5px;
     }
 }
