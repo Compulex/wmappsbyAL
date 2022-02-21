@@ -83,20 +83,27 @@
 					</div>
 				</div>
 			</div>
-			<!--<script language="javascript" type="text/javascript">
+			<script language="javascript" type="text/javascript">
 				var platform = [];
-				if(navigator.platform.indexOf("Android") > -1){
+				var apks = document.getElementsByClassName("mapps");
+				
+				if(/Android/i.test(navigator.userAgent)){
 					//show apk files
-					document.getElementById("android").style.visibility = "hidden";
-				}
-				else{
-					//hide links
-					var apks = document.getElementsByClassName("mapps");
 					for(var i = 0; i < apks.length; i++){
 						apks[i].style.visibility = "hidden";
 					}
+					//hide note
+					document.getElementById("android").style.visibility = "hidden";
 				}
-			</script>-->
+				else{
+					//hide apk files
+					for(var i = 0; i < apks.length; i++){
+						apks[i].style.visibility = "hidden";
+					}
+					//show note
+					document.getElementById("android").style.visibility = "visible";
+				}
+			</script>
 		</div>
 		<footer><em>Stay blessed, never stressed</em> &#x1f64f;</footer>
 	</body>
