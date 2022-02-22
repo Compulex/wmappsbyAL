@@ -1,0 +1,57 @@
+[
+    {
+        "app_name": "Guess For An Angel",
+        "version": [
+            {
+                "vnum": 1,
+                "date": "02-22-2022",
+                "change_log": "init"
+            }
+        ],
+        "download_link": "https://appsbyanl.herokuapp.com/androidapps/gfaa_AL.apk"
+    },
+    {
+        "app_name": "Priorities",
+        "version": [
+            {
+                "vnum": 1,
+                "date": "02-22-2022",
+                "change_log": "init"
+            }
+        ],
+        "download_link": "https://appsbyanl.herokuapp.com/androidapps/priorities_AL.apk"
+    },
+    {
+        "app_name": "Remind Me",
+        "version": [
+            {
+                "vnum": 1,
+                "date": "02-22-2022",
+                "change_log": "init"
+            }
+        ],
+        "download_link": "https://appsbyanl.herokuapp.com/androidapps/remindme_AL.apk"
+    },
+    {
+        "app_name": "Split Bill",
+        "version": [
+            {
+                "vnum": 1,
+                "date": "02-22-2022",
+                "change_log": "init"
+            }
+        ],
+        "download_link": "https://appsbyanl.herokuapp.com/androidapps/splitbill_AL.apk"
+    },
+    {
+        "app_name": "Unit Conversions",
+        "version": [
+            {
+                "vnum": 1,
+                "date": "02-22-2022",
+                "change_log": "init"
+            }
+        ],
+        "download_link": "https://appsbyanl.herokuapp.com/androidapps/unitConvert_AL.apk"
+    }
+]
