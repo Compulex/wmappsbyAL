@@ -15,7 +15,7 @@ body {
     text-transform: uppercase;
     width: auto;
     text-align: center;
-    background-image: url("../img/chalkboard.png");
+    background-image: url("../img/chalkboard_bkg.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
