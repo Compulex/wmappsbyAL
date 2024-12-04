@@ -38,7 +38,6 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 4px;
-	width: 50%;
 }
 .column{
 	flex: 50%;
