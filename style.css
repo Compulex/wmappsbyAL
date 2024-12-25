@@ -23,7 +23,7 @@ body{
 	cursor: pointer;
 	transition: 0.3s;
 }
-.modal{
+#myModal{
 	display: none;
 	position: fixed;
 	z-index: 1;
@@ -42,7 +42,7 @@ body{
 	width: 80%;
 	max-width: 700px;
 }
-.close{
+#close{
 	position: absolute;
 	top: 15px;
 	right: 35px;
@@ -51,7 +51,7 @@ body{
 	font-weight: bold;
 	transition: 0.3s;
 }
-.close:hover, .close:focus{
+#close:hover, #close:focus{
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
